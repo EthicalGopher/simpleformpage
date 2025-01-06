@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+ 
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Karla">
+
+    <title> Contact form</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <style>
+    span {
+      color: hsl(169, 82%, 27%);
+    }
+    * {
+      font-size: 16px;
+      font-family: 'karla',sans-serif;
+    }
+  </style>
+  <body
+    class="container d-flex flex-column justify-content-center min-vh-100 py-5"
+    style="background-color: hsl(148, 38%, 91%)"
+  >
+    <div class="p-5 container bg-light" style="border-radius: 25px">
+      <header>
+        <p class="h2" style="font-weight: 700">Contact Us</p>
+      </header>
+      <main>
+        <form onsubmit="handleSubmit(event)">
+          <div class="d-flex" style="gap: 25px">
+            <div class="w-50">
+              <lable for="first-name">First Name <span>*</span></lable>
+              <br />
+              <input
+                type="text"
+                name="first-name"
+                id="first-name"
+                class="form-control p-4 border-dark my-2"
+                required
+              />
+            </div>
+            <div class="w-50">
+              <lable for="last-name">Last Name <span>*</span></lable>
+              <br />
+              <input
+                type="text"
+                name="last-name"
+                id="last-name"
+                class="form-control p-4 border-dark my-2"
+                required
+              />
+            </div>
+          </div>
+          <div class="my-3 w-100">
+            <label for="email">Email Address <span>*</span></label>
+            <br />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="form-control p-4 border-dark my-2"
+              required
+            />
+          </div>
+          <p class="my-3 mb-3">Query Type <span>*</span></p>
+          <div class="d-flex" style="gap: 20px">
+            <div
+              class="d-flex align-items-center border border-dark rounded p-3 w-50"
+              style="gap: 10px"
+            >
+              <input
+                type="radio"
+                name="query-type"
+                id="general"
+                value="general"
+                required
+              />
+              <div for="general" style="font-size: large">General Enquiry</div>
+            </div>
+            <div
+              class="d-flex align-items-center border border-dark rounded p-3 w-50"
+              style="gap: 10px"
+            >
+              <input
+                type="radio"
+                name="query-type"
+                id="support"
+                value="support"
+                required
+              />
+              <div for="support" style="font-size: large">Support Enquiry</div>
+            </div>
+          </div>
+          <div class="my-4">
+            <label for="message">Message <span>*</span></label>
+            <textarea
+              name="message"
+              id="message"
+              class="form-control border border-dark"
+              style="border-radius: 15px"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+          <div>
+            <input type="checkbox" name="checkbox" id="consent" required />
+            <label for="consent"
+              >I consent to being contacted by the team <span>*</span></label
+            >
+          </div>
+          <button
+            type="submit"
+            class="form-control text-light p-4 d-flex flex-column justify-content-center align-items-center font-weight-bold"
+            style="font-size: large; background-color: hsl(169, 82%, 27%)"
+          >
+            Submit
+          </button>
+        </form>
+      </main>
+      <footer></footer>
+      <script>
+        function handleSubmit(event) {
+          event.preventDefault(); // Prevents the form from submitting normally
+          alert("Thanks for completing the form. We'll be in touch soon!");
+        }
+      </script>
+
+      <!-- Bootstrap JS and dependencies -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </div>
+  </body>
+</html>
